@@ -12,7 +12,6 @@ public abstract class  MedioDeAlojamiento  extends DatosCliente {
         this.cantNoches = cantNoches;
     }
 
-
     public int getValorBaseNoche() {
         return valorBaseNoche;
     }

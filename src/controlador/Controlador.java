@@ -19,7 +19,6 @@ public class Controlador {
     }
 
     //Metodo para ingresar nuevo alojamiento dependiendo si el cliente ya esta dentro de los alojamientos existentes
-
     public void ingresarMedioAlojamiento(MedioDeAlojamiento alojamientoNuevo) {
         for (int i = 0; i < alojamiento.size(); i++) {
             if (alojamientoNuevo.getRut() == alojamiento.get(i).getRut()) {
@@ -36,7 +35,7 @@ public class Controlador {
             alojamiento.get(i).getDatos();
         }
     }
-
+    //Metodo para mostrar donde se aloja el cliente y datos
     public void mostrarDatosCliente(int rut, String nombre) {
         for (int i = 0; i < alojamiento.size(); i++) {
             if (alojamiento.get(i).getRut() == rut && nombre.equalsIgnoreCase(alojamiento.get(i).getNombre())) {
@@ -46,7 +45,7 @@ public class Controlador {
         }
         System.out.println("El cliente no existe");
     }
-
+    //Calcular totalAdicional
     public int totalAdicional() {
         int totalAdicional = 0;
         for (int i = 0; i < alojamiento.size(); i++) {
@@ -54,7 +53,7 @@ public class Controlador {
         }
         return totalAdicional;
     }
-
+    //Calcular total del bono descuento
     public int totalBonoDescuento() {
         int bonoDescuento = 0;
         for (int i = 0; i < alojamiento.size(); i++) {
@@ -62,11 +61,11 @@ public class Controlador {
         }
         return bonoDescuento;
     }
-
+    //Mostrar total de alojamientos
     public int cantMediosAlojamiento() {
         return alojamiento.size();
     }
-
+    //Calcular valor a cancelar
     public int valorACancelarCliente(int rut) {
         for (int i = 0; i < alojamiento.size(); i++) {
             if (alojamiento.get(i).getRut() == rut) {
@@ -77,7 +76,7 @@ public class Controlador {
         System.out.println("El cliente no existe");
         return 0;
     }
-
+    //Calcular incrementar valor base
     public int incrementarValorBase(){
         int incrementar = 0;
         for (int i = 0; i < alojamiento.size(); i++) {

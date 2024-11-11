@@ -10,7 +10,6 @@ public abstract class Hospederia extends MedioDeAlojamiento {
         this.esFumador = esFumador;
     }
 
-
     public int getCapacidad() {
         return capacidad;
     }
@@ -27,9 +26,5 @@ public abstract class Hospederia extends MedioDeAlojamiento {
         this.esFumador = esFumador;
     }
 
-
-
-
     public  abstract int valorACancelar();
-
 }
